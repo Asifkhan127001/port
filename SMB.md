@@ -4,6 +4,27 @@ Samba is the standard Windows interoperability suite of programs for Linux and U
 
 Samba is based on the common client/server protocol of Server Message Block (SMB). SMB is developed only for Windows, without Samba, other computer platforms would be isolated from Windows machines, even if they were part of the same network.
 
+[Port Version](#port-version)
+
+[Nmap Script](#nmap-script)
+
+[Metasploit auxiliary](#metasploit-auxiliary)
+
+[Banner grabbing](#Banner-grabbing)
+
+[Enumeration tool](#Enumeration-tool)
+
+[Anonymous Login](#Anonymous-Login)
+
+[Downlods-smb-server-file](#Downlods-smb-server-file)
+
+[check shared folder on SMB](#check-shared-folder-on-SMB)
+
+[Acess the share folder named “nerdherd_classified”](#Acess-the-share-folder-named-“nerdherd_classified”)
+
+[Login smb server](#Login-smb-server)
+
+[Downlods file use the command](#Downlods-file-use-the-command)
 
 ## Port version
 
@@ -24,7 +45,7 @@ Samba is based on the common client/server protocol of Server Message Block (SMB
 
 ## Banner grabbing
 
-    telnet IP 21
+    telnet IP 139,445
     nmap -sV --script=banner IP
     nc IP 21
 
@@ -40,7 +61,7 @@ Samba is based on the common client/server protocol of Server Message Block (SMB
 
     smbget -R smb://10.10.141.111/anonymous
 
-## check shared folder on SMB:
+## check shared folder on SMB
 
     smbclient -L //10.10.136.182/
 
