@@ -15,6 +15,19 @@ Samba is based on the common client/server protocol of Server Message Block (SMB
      smb-enum-users.nse
      etc....
 
+## Metasploit auxiliary
+
+     auxiliary/scanner/smb/smb_login 
+     auxiliary/scanner/smb/smb_enumusers_domain
+     auxiliary/scanner/smb/smb_ms17_010
+     etc...
+
+## Banner grabbing
+
+     telnet IP 21
+     nmap -sV --script=banner IP
+     nc IP 21
+
 ## Enumeration tool  
 
     enum4linux -a IP
